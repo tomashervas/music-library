@@ -1,14 +1,17 @@
 import { Artist } from "./artist";
-import { Company } from "./company";
 
 export interface Song {
   id: number;
   title: string;
   poster: string;
   genre: string[];
-  year: number;
+  year: number; 
   duration: number;
   rating: number;
+  artistId: number;
   artist: Artist;
-  company?: Company;
+}
+
+export type SongDTO = Omit<Song, "artist"> & {
+  id?: number;
 }
