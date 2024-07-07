@@ -13,12 +13,12 @@ export class SongsService {
 
   // Obtener todas las canciones
   getSongs(): Observable<Song[]> {
-    return this.http.get<Song[]>(`${this.baseUrl}?_expand=artist&_expand=company`);
+    return this.http.get<Song[]>(`${this.baseUrl}?_expand=artist`);
   }
 
   // Obtener una canción por ID
   getSong(id: number): Observable<Song> {
-    return this.http.get<Song>(`${this.baseUrl}/${id}?_expand=artist&_expand=company`);
+    return this.http.get<Song>(`${this.baseUrl}/${id}?_expand=artist`);
   }
 
   // Crear una nueva canción

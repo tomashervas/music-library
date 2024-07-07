@@ -7,6 +7,8 @@ import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+import { SongsState } from './songs/state/songs.state';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxsModule.forRoot([], { developmentMode: /** !environment.production */ false }),
+    HttpClientModule,
+    NgxsModule.forRoot([SongsState], { developmentMode: /** !environment.production */ false }),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({keys:'*'})

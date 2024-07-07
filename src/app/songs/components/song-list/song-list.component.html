@@ -1,1 +1,20 @@
-<p>song-list works!</p>
+<div *ngIf="loadingState$ | async as loadingState" class="p-4">
+    <div *ngIf="loadingState === 'pending'" class="text-center">
+      <div class="loader">Cargando...</div>
+    </div>
+    <div *ngIf="loadingState === 'error'" class="text-red-500 text-center">
+      Error al cargar los datos.
+    </div>
+    <div *ngIf="loadingState === 'fulfilled'">
+      <div *ngIf="songs$ | async as songs">
+        <div *ngIf="songs.length > 0; else noSongs">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <app-song-card *ngFor="let song of songs" [song]="song" (delete)="onDelete($event)"></app-song-card>
+          </div>
+        </div>
+        <ng-template #noSongs>
+          <p class="text-center text-gray-600">No hay canciones disponibles.</p>
+        </ng-template>
+      </div>
+    </div>
+</div>
