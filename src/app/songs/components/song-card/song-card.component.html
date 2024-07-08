@@ -1,6 +1,6 @@
 <div (click)="goDetail()" class="bg-gray-800 shadow-md rounded-lg p-4 mb-4 space-y-4">
     <h3 class="font-semibold">{{ song.title }} ({{ song.artist.name }})</h3>
-    <img [src]="song.poster" alt="">
+    <img class="w-full h-64 object-cover rounded" [src]="song.poster" alt="">
     <div class="flex space-x-4">
         <p *ngFor="let genre of song.genre">#{{genre}}</p>
 
