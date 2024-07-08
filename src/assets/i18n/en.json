@@ -1,0 +1,37 @@
+{
+    "MENU": {
+      "SONGS": "Songs",
+      "ARTISTS": "Artists",
+      "COMPANIES": "Record Companies"
+    },
+    "TITLE": {
+      "SONGS": "Songs",
+      "NEW_SONG": "New Song",
+      "EDIT_SONG": "Edit Song",
+      "ARTISTS": "Artists",
+      "COMPANIES": "Record Companies"
+    },
+    "DETAIL_SONG": {
+      "GENRE": "Genre",
+      "YEAR": "Year",
+      "DURATION": "Duration",
+      "RATING": "Rating",
+      "EDIT": "Edit",
+      "DELETE": "Delete"
+    },
+    "NEW_SONG": {
+      "TITLE": "Title",
+      "ARTISTS": "Artists",
+      "GENRE": "Genre",
+      "YEAR": "Year",
+      "DURATION": "Duration",
+      "RATING": "Rating",
+      "SAVE": "Save",
+      "PLACE_TITLE": "Enter the song title",
+      "PLACE_ARTIST": "Enter the artists",
+      "PLACE_GENRE": "Enter the genre",
+      "PLACE_YEAR": "Enter the year",
+      "PLACE_DURATION": "Enter the duration",
+      "PLACE_RATING": "Enter the rating"
+    }
+}

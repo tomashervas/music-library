@@ -11,27 +11,27 @@
             <img [src]="song.poster" alt="{{ song.title }}" class="w-full h-64 object-cover rounded">
         </div>
         <div class="mb-4">
-            <h3 class="text-lg font-semibold">Género</h3>
+            <h3 class="text-lg font-semibold">{{ 'DETAIL_SONG.GENRE' | translate }}</h3>
             <div class="flex flex-wrap">
             <span *ngFor="let genre of song.genre" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full mr-2 mb-2">{{ genre }}</span>
             </div>
         </div>
         <div class="mb-4">
-            <h3 class="text-lg font-semibold">Año</h3>
+            <h3 class="text-lg font-semibold">{{ 'DETAIL_SONG.YEAR' | translate }}</h3>
             <p>{{ song.year }}</p>
         </div>
         <div class="mb-4">
-            <h3 class="text-lg font-semibold">Duración</h3>
+            <h3 class="text-lg font-semibold">{{ 'DETAIL_SONG.DURATION' | translate }}</h3>
             <p>{{ song.duration }} minutos</p>
         </div>
         <div class="mb-4">
-            <h3 class="text-lg font-semibold">Puntuación</h3>
+            <h3 class="text-lg font-semibold">{{ 'DETAIL_SONG.RATING' | translate }}</h3>
             <p>{{ song.rating }} / 10</p>
         </div>
         </div>
         <div class="absolute bottom-6 right-6 space-x-4">
-            <button (click)="onEdit()" class="border px-4 py-2 rounded hover:bg-gray-700">Editar</button>
-            <button (click)="onDelete()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Eliminar</button>
+            <button (click)="onEdit()" class="border px-4 py-2 rounded hover:bg-gray-700">{{ 'DETAIL_SONG.EDIT' | translate }}</button>
+            <button (click)="onDelete()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">{{ 'DETAIL_SONG.DELETE' | translate }}</button>
         </div>
     </div>
   </div>

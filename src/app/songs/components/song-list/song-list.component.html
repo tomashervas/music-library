@@ -1,4 +1,4 @@
-<div *ngIf="loadingState$ | async as loadingState" class="p-4">
+<div *ngIf="loadingState$ | async as loadingState" class="p-4 relative">
     <div *ngIf="loadingState === 'pending'" class="text-center">
       <div class="loader">Cargando...</div>
     </div>
@@ -17,4 +17,5 @@
         </ng-template>
       </div>
     </div>
+    <button (click)="onAdd()" class="fixed bg-white/70 text-gray-700 border border-gray-700 text-3xl bottom-10 right-10 h-12 w-12 rounded-full" > + </button>
 </div>

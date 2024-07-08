@@ -1,0 +1,38 @@
+{
+    "MENU": {
+      "SONGS": "Canciones",
+      "ARTISTS": "Artistas",
+      "COMPANIES": "Compañías discográficas"
+    },
+    "TITLE":{
+      "SONGS": "Canciones",
+      "NEW_SONG": "Nueva cancion",
+      "EDIT_SONG": "Editar cancion",
+      "ARTISTS": "Artistas",
+      "COMPANIES": "Compañías discográficas"
+    },
+    "DETAIL_SONG":{
+        "GENRE": "Género",
+        "YEAR": "Año",
+        "DURATION": "Duración",
+        "RATING": "Puntuación",
+        "EDIT": "Editar",
+        "DELETE": "Eliminar"
+    },
+    "NEW_SONG":{
+        "TITLE": "Título",
+        "ARTISTS": "Artistas",
+        "GENRE": "Género",
+        "YEAR": "Año",
+        "DURATION": "Duración",
+        "RATING": "Puntuación",
+        "SAVE": "Guardar",
+        "PLACE_TITLE": "Introduce el título de la canción",
+        "PLACE_ARTIST": "Introduce los artistas",
+        "PLACE_GENRE": "Introduce el género",
+        "PLACE_YEAR": "Introduce el año",
+        "PLACE_DURATION": "Introduce la duración",
+        "PLACE_RATING": "Introduce la puntuación"
+    }
+}
+  

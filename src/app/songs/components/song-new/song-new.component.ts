@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
 import { CreateSong } from '../../state/songs.actions';
 import { SongDTO } from '../../../models/song';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-song-new',
@@ -17,7 +18,8 @@ export class SongNewComponent {
   constructor(
     private fb: FormBuilder,
     private store: Store,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) { }
 
   ngOnInit(): void {

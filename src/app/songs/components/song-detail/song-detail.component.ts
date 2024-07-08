@@ -5,6 +5,7 @@ import { Song } from '../../../models/song';
 import { SongsState } from '../../state/songs.state';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DeleteSong, LoadSong } from '../../state/songs.actions';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-song-detail',
@@ -16,7 +17,7 @@ export class SongDetailComponent {
   loadingState$: Observable<'idle' | 'pending' | 'fulfilled' | 'error'> = this.store.select(SongsState.loadingState);
   songId!: number;
 
-  constructor(private route: ActivatedRoute, private store: Store, private router: Router) { }
+  constructor(private route: ActivatedRoute, private store: Store, private router: Router, private translate: TranslateService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap?.get('id');
@@ -31,7 +32,7 @@ export class SongDetailComponent {
   }
 
   onEdit(): void {
-    this.router.navigate(['/songs/edit', this.songId]);
+    this.router.navigate(['/songs', this.songId, 'edit']);
   }
 
 }

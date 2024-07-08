@@ -1,30 +1,35 @@
 <nav class="text-gray-200 cursor-pointer">
 
-  <div class="flex items-center md:justify-center " >
+  <div class="flex items-center justify-between " >
     <button (click)="toggleMenu()" class="md:hidden p-4">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
     <h1 class="text-xl font-bold md:text-2xl md:p-4">{{title}}</h1>
+    <div class="flex space-x-2">
+      <button (click)="changeLanguage('en')" class="">en</button>
+      <button (click)="changeLanguage('es')" class="">es</button>
+    </div>
+
   </div>
 
 
   
     <!-- big screen menu -->
     <ul class="hidden md:flex space-x-4 p-4">
-      <li><a routerLink="/songs" routerLinkActive="active" class="hover:text-gray-400">Canciones</a></li>
-      <li><a routerLink="/artists" routerLinkActive="active" class="hover:text-gray-400">Artistas</a></li>
-      <li><a routerLink="/companies" routerLinkActive="active" class="hover:text-gray-400">Compañías discográficas</a></li>
+      <li><a routerLink="/songs" routerLinkActive="active" class="hover:text-gray-400">{{ 'MENU.SONGS' | translate }}</a></li>
+      <li><a routerLink="/artists" routerLinkActive="active" class="hover:text-gray-400">{{ 'MENU.ARTISTS' | translate }}</a></li>
+      <li><a routerLink="/companies" routerLinkActive="active" class="hover:text-gray-400">{{ 'MENU.COMPANIES' | translate }}</a></li>
     </ul>
   
     <!-- mobile menu -->
-    <div [ngClass]="{'hidden': !isMenuOpen}" class="md:hidden fixed inset-y-0 left-0 w-4/5 bg-gray-800 shadow-lg">
+    <div [ngClass]="{'hidden': !isMenuOpen}" class="md:hidden fixed inset-y-0 left-0 w-4/5 bg-gray-800 shadow-lg z-50">
         <button (click)="toggleMenu()" class="md:hidden text-xl absolute top-6 right-6">X</button>
       <ul class="flex flex-col items-center justify-center h-full space-y-4" >
-        <li><a routerLink="/songs" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">Canciones</a></li>
-        <li><a routerLink="/artists" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">Artistas</a></li>
-        <li><a routerLink="/companies" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">Compañías discográficas</a></li>
+        <li><a routerLink="/songs" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">{{ 'MENU.SONGS' | translate }}</a></li>
+        <li><a routerLink="/artists" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">{{ 'MENU.ARTISTS' | translate }}</a></li>
+        <li><a routerLink="/companies" routerLinkActive="active" class="hover:text-gray-400" (click)="toggleMenu()">{{ 'MENU.COMPANIES' | translate }}</a></li>
       </ul>
     </div>
   </nav>

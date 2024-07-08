@@ -7,6 +7,7 @@ import { SongDetailComponent } from './components/song-detail/song-detail.compon
 import { SongNewComponent } from './components/song-new/song-new.component';
 import { SongCardComponent } from './components/song-card/song-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     SongsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forChild()
   ]
 })
 export class SongsModule { }
