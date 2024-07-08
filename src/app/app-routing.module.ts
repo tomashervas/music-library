@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'songs', pathMatch: 'full' },
   {
     path: 'songs',
     loadChildren: () => import('./songs/songs.module').then(m => m.SongsModule)
@@ -16,6 +15,7 @@ const routes: Routes = [
     path: 'companies',
     loadChildren: () => import('./companies/companies.module').then(m => m.CompaniesModule)
   },
+  { path: '', redirectTo: 'songs', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
 

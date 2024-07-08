@@ -1,1 +1,37 @@
-<p>song-detail works!</p>
+<div *ngIf="loadingState$ | async as loadingState" class="max-w-4xl mx-auto p-6 shadow-md rounded">
+        <div *ngIf="loadingState === 'pending'" class="text-center">
+          <div class="loader">Cargando...</div>
+        </div>
+    <div *ngIf="loadingState === 'fulfilled'" >
+        <div *ngIf="song$ | async as song">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold">{{ song.title }} <span class="text-gray-400">({{ song.artist.name }})</span></h2>
+        </div>
+        <div class="mb-6">
+            <img [src]="song.poster" alt="{{ song.title }}" class="w-full h-64 object-cover rounded">
+        </div>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Género</h3>
+            <div class="flex flex-wrap">
+            <span *ngFor="let genre of song.genre" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full mr-2 mb-2">{{ genre }}</span>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Año</h3>
+            <p>{{ song.year }}</p>
+        </div>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Duración</h3>
+            <p>{{ song.duration }} minutos</p>
+        </div>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Puntuación</h3>
+            <p>{{ song.rating }} / 10</p>
+        </div>
+        </div>
+        <div class="absolute bottom-6 right-6 space-x-4">
+            <button (click)="onEdit()" class="border px-4 py-2 rounded hover:bg-gray-700">Editar</button>
+            <button (click)="onDelete()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Eliminar</button>
+        </div>
+    </div>
+  </div>
