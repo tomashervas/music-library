@@ -12,6 +12,6 @@ export interface Song {
   artist: Artist;
 }
 
-export type SongDTO = Omit<Song, "artist"> & {
+export type SongDTO = Omit<Song, "artist" | "id" > & {
   id?: number;
 }
