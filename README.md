@@ -1,27 +1,48 @@
-# MusicLibrary
+# Music Library - Angular Technical Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+This is a simple Angular application for managing songs, artists, and record companies. The application uses `ngx-translate` for multi-language support and `json-server` for mock data.
 
-## Development server
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/tomashervas/music-library.git
+   cd ./music-library
+    
+2. Install the dependencies:
+  ```bash
+   npm install
+  ```
+   
+3. Install json-server globally if you haven't already:
+```bash
+  npm install -g json-server
+```
+## Usage
+1. Running the Application
+Start the json-server with mock data:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+json-server --watch src/assets/mock.json --delay 1000
+```
 
-## Build
+2. In a separate terminal, start the Angular application:
+```bash
+ng serve
+```
+3. Open your browser and navigate to http://localhost:4200.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
+- Songs Management: View, add, edit, and delete songs.
+- GLobal state management with NGXS.
+- Styles with Tailwind CSS.
+- Multi-language Support: Switch between English and Spanish using ngx-translate.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is licensed under the MIT License.
